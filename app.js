@@ -19,13 +19,13 @@ function calculate() {
     .then(data => {
       const rate = data.conversion_rates[currency_Two];
 
-      rateEl.innerText = `1 ${currency_One} = ${rate} ${currency_Two}`; //display the currency change
+      rateEl.innerText = `1 ${currency_One} = ${rate} ${currency_Two}`; // Display the currency change
 
       amountEl_Two.value = (amountEl_One.value * rate).toFixed(2);
     });
 }
 
-// event listener
+// Event listener
 currencyEl_One.addEventListener("change", calculate);
 amountEl_One.addEventListener("input", calculate);
 currencyEl_Two.addEventListener("change", calculate);
